@@ -3,13 +3,14 @@
   "id": "sample-beef-wellington",
   "status": "wishlist",
   "title": "Sample Beef Wellington",
-  "description": "A rich, pastry-wrapped beef meal I want to make for a winter dinner.",
+  "description": "[Sample] A rich, pastry-wrapped beef meal I want to make for a winter dinner.",
   "sprite": null,
   "photo": null,
   "servings": null,
   "prepMinutes": null,
   "cookMinutes": null,
   "tags": [
+    "sample",
     "dinner"
   ],
   "ingredients": [],

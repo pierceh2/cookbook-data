@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-08T02:27:30Z",
+  "generatedAt": "2026-11-08T02:41:45Z",
   "madeCount": 1,
   "recipeCount": 2,
   "recipes": [
     {
-      "contentHash": "81021022f557211e636b76f545ba23c59f5eb38827f9f2d67b756be27c254f4f",
+      "contentHash": "df14944fde7a7dc95f5643c88adcf766aa6f0007258e368595e3f0a258081eda",
       "cookMinutes": null,
       "createdAt": "2026-11-08",
-      "description": "A rich, pastry-wrapped beef meal I want to make for a winter dinner.",
+      "description": "[Sample] A rich, pastry-wrapped beef meal I want to make for a winter dinner.",
       "id": "sample-beef-wellington",
       "ingredients": [],
       "madeAt": null,
@@ -23,6 +23,7 @@
       "status": "wishlist",
       "steps": [],
       "tags": [
+        "sample",
         "dinner"
       ],
       "tips": null,
@@ -30,10 +31,10 @@
       "updatedAt": "2026-11-08"
     },
     {
-      "contentHash": "c508c8e860a7a938b0bde9f84bdd6228f42afb90ea5b04e65eafe60fe180f997",
+      "contentHash": "089139ebd4e63d2805017110f080e373401dc329b708540db0a927c4c5b91225",
       "cookMinutes": 12,
       "createdAt": "2026-11-08",
-      "description": "A warm stack of buttermilk pancakes with glossy syrup and a butter pat, plated for the morning table.",
+      "description": "[Sample] A warm stack of buttermilk pancakes with glossy syrup and a butter pat, plated for the morning table.",
       "id": "sample-pancakes",
       "ingredients": [
         {
@@ -69,6 +70,7 @@
         "Stack the pancakes, top with butter and syrup, and serve warm."
       ],
       "tags": [
+        "sample",
         "breakfast",
         "sweet"
       ],

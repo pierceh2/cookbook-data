@@ -44,8 +44,6 @@ def main():
         if recipe.get('status') == 'wishlist':
             if recipe.get('madeAt') is not None:
                 errors.append(f'Wishlist recipe {recipe.get("id")} has a madeAt value')
-            if recipe.get('sprite') is not None:
-                errors.append(f'Wishlist recipe {recipe.get("id")} should have sprite null')
             if recipe.get('ingredients') and len(recipe['ingredients']) != 0:
                 errors.append(f'Wishlist recipe {recipe.get("id")} must have empty ingredients')
             if recipe.get('steps') and len(recipe['steps']) != 0:
@@ -57,14 +55,15 @@ def main():
                 errors.append(f'Made recipe {recipe.get("id")} must have at least one ingredient')
             if recipe.get('steps') is None or len(recipe['steps']) == 0:
                 errors.append(f'Made recipe {recipe.get("id")} must have at least one step')
-            sprite = recipe.get('sprite')
-            if sprite:
-                sprite_path = recipe_dir / sprite
-                if not sprite_path.exists():
-                    errors.append(f'Missing sprite asset for {recipe.get("id")}: {sprite_path}')
-                else:
-                    if not render_matches(recipe_dir):
-                        errors.append(f'Sprite render mismatch for {recipe.get("id")}')
+        sprite = recipe.get('sprite')
+        if sprite:
+            sprite_path = recipe_dir / sprite
+            if not sprite_path.exists():
+                errors.append(f'Missing sprite asset for {recipe.get("id")}: {sprite_path}')
+            elif not (recipe_dir / 'sprite.py').exists():
+                errors.append(f'Missing sprite.py for {recipe.get("id")}')
+            elif not render_matches(recipe_dir):
+                errors.append(f'Sprite render mismatch for {recipe.get("id")}')
         for ingredient in recipe.get('ingredients', []):
             if ingredient.get('name') and ingredient['name'] != ingredient['name'].lower():
                 errors.append(f'Ingredient name must be lowercase for {recipe.get("id")}: {ingredient.get("name")}')

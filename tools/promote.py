@@ -1,6 +1,6 @@
 import argparse
 import json
-from datetime import date
+from dates import today_iso
 from pathlib import Path
 
 
@@ -18,7 +18,7 @@ def main():
         print('Already marked as made.')
         return
 
-    today = date.today().isoformat()
+    today = today_iso()
     recipe['status'] = 'made'
     recipe['madeAt'] = today
     recipe['updatedAt'] = today

@@ -1,4 +1,5 @@
 import argparse
+import json
 import importlib.util
 import sys
 from pathlib import Path
@@ -63,7 +64,8 @@ def add_outline_and_shadow(img: Image.Image):
     shadow = Image.new('RGBA', (width, height), (0, 0, 0, 0))
     draw = ImageDraw.Draw(shadow)
     draw.ellipse((15, 46, 49, 58), fill=(44, 54, 90, 255))
-    return Image.alpha_composite(result, shadow)
+    # Shadow sits under the dish, not over it.
+    return Image.alpha_composite(shadow, result)
 
 
 def render_sprite(script_path: Path, output_path: Path):
@@ -75,31 +77,53 @@ def render_sprite(script_path: Path, output_path: Path):
     img.save(output_path)
 
 
+def _hex(name: str):
+    return read_palette()[name] + (255,)
+
+
+def _neighbor_sprites(recipe_dir: Path, limit: int = 3):
+    """Most recently made/created other recipes that have a sprite; real recipes before samples."""
+    candidates = []
+    for png in (ROOT / 'recipes').glob('*/sprite.png'):
+        other = png.parent
+        if other.resolve() == recipe_dir.resolve():
+            continue
+        stamp = ''
+        try:
+            data = json.loads((other / 'recipe.json').read_text())
+            stamp = data.get('madeAt') or data.get('createdAt') or ''
+        except Exception:
+            pass
+        is_sample = other.name.startswith('sample-')
+        candidates.append((is_sample, _neg(stamp), other.name, png))
+    candidates.sort()
+    return [Image.open(c[3]).convert('RGBA') for c in candidates[:limit]]
+
+
+def _neg(stamp: str):
+    # Sort newest first without parsing: invert each character.
+    return ''.join(chr(0x10FFFF - ord(ch)) for ch in stamp)
+
+
 def build_preview(recipe_dir: Path, source_png: Path):
+    """Preview strip: [parchment][dark wood][this sprite + up to 3 neighbors at half size, app navy]."""
     sprite = Image.open(source_png).convert('RGBA')
-    checker = Image.new('RGBA', (256, 256), (248, 245, 233, 255))
-    for y in range(0, 256, 16):
-        for x in range(0, 256, 16):
-            if (x // 16 + y // 16) % 2 == 0:
-                checker.putpixel((x, y), (228, 223, 210, 255))
-    panel_a = checker.copy()
-    panel_a.paste(sprite, (0, 0), sprite)
-    panel_b = Image.new('RGBA', (256, 256), (246, 238, 220, 255))
-    panel_b.paste(sprite, (0, 0), sprite)
-    side_refs = []
-    for ref in sorted((ROOT / 'recipes').glob('*/sprite.png')):
-        if ref.name == 'sprite.png' and ref.parent.name.startswith('sample-'):
-            side_refs.append(Image.open(ref).convert('RGBA').resize((128, 128), Image.Resampling.NEAREST))
-    while len(side_refs) < 3:
-        side_refs.append(sprite.resize((128, 128), Image.Resampling.NEAREST))
-    panel_c = Image.new('RGBA', (256, 256), (245, 235, 220, 255))
-    for i, ref in enumerate(side_refs[:3]):
-        panel_c.paste(ref, (12 + 80 * i, 64))
-    preview = Image.new('RGBA', (768, 256), (255, 255, 255, 255))
-    preview.paste(panel_a, (0, 0))
-    preview.paste(panel_b, (256, 0))
-    preview.paste(panel_c, (512, 0))
-    preview_path = Path('/tmp') / f'{recipe_dir.name}_preview.png'
+    panel_paper = Image.new('RGBA', (256, 256), _hex('paper'))
+    panel_paper.alpha_composite(sprite)
+    panel_wood = Image.new('RGBA', (256, 256), _hex('wood_dark'))
+    panel_wood.alpha_composite(sprite)
+    strip = Image.new('RGBA', (512, 256), _hex('navy'))
+    smalls = [sprite] + _neighbor_sprites(recipe_dir)
+    for i, img in enumerate(smalls[:4]):
+        small = img.resize((128, 128), Image.Resampling.NEAREST)
+        strip.alpha_composite(small, (128 * i, 64))
+    preview = Image.new('RGBA', (1024, 256), (0, 0, 0, 255))
+    preview.paste(panel_paper, (0, 0))
+    preview.paste(panel_wood, (256, 0))
+    preview.paste(strip, (512, 0))
+    out_dir = ROOT / '.preview'
+    out_dir.mkdir(exist_ok=True)
+    preview_path = out_dir / f'{recipe_dir.name}_preview.png'
     preview.save(preview_path)
     return preview_path
 
@@ -119,7 +143,7 @@ def main():
     out = recipe_dir / 'sprite.png'
     render_sprite(sprite_script, out)
     if args.preview:
-        build_preview(recipe_dir, out)
+        print(f'Preview: {build_preview(recipe_dir, out).relative_to(ROOT)}')
 
 
 if __name__ == '__main__':

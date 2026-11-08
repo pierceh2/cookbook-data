@@ -4,13 +4,14 @@
   "status": "made",
   "madeAt": "2026-11-08",
   "title": "Sample Pancakes",
-  "description": "A warm stack of buttermilk pancakes with glossy syrup and a butter pat, plated for the morning table.",
+  "description": "[Sample] A warm stack of buttermilk pancakes with glossy syrup and a butter pat, plated for the morning table.",
   "sprite": "sprite.png",
   "photo": null,
   "servings": 2,
   "prepMinutes": 10,
   "cookMinutes": 12,
   "tags": [
+    "sample",
     "breakfast",
     "sweet"
   ],

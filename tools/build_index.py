@@ -25,12 +25,13 @@ def compute_recipe_entry(recipe_path: Path):
     recipe = read_json(recipe_path)
     validate_recipe(recipe)
     recipe_dir = recipe_path.parent
-    if recipe.get('status') == 'wishlist':
+    if recipe.get('sprite'):
+        sprite_rel = 'recipes/' + recipe_dir.name + '/' + recipe['sprite']
+        sprite_file = recipe_dir / recipe['sprite']
+    else:
+        # Wishlist dishes without a drawn sprite fall back to the covered-dish placeholder.
         sprite_rel = 'style/wishlist_placeholder.png'
         sprite_file = ROOT / 'style' / 'wishlist_placeholder.png'
-    else:
-        sprite_rel = ('recipes/' + recipe_dir.name + '/sprite.png')
-        sprite_file = recipe_dir / 'sprite.png'
     photo_rel = None
     if recipe.get('photo'):
         photo_rel = ('recipes/' + recipe_dir.name + '/' + recipe['photo'])

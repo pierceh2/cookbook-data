@@ -1,7 +1,7 @@
 import argparse
 import json
 import re
-from datetime import date
+from dates import today_iso
 from pathlib import Path
 
 
@@ -27,7 +27,7 @@ def main():
         raise FileExistsError(f'Recipe id already exists: {recipe_id}')
     target.mkdir(parents=True)
 
-    today = date.today().isoformat()
+    today = today_iso()
     if args.wishlist:
         payload = {
             'schemaVersion': 1,

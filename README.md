@@ -6,8 +6,8 @@ To add a recipe by hand:
 
 1. Create a folder under `recipes/<id>/` using lowercase kebab-case.
 2. Add a valid `recipe.json` matching the schema in `schema/recipe.schema.json`.
-3. For a made recipe, add `sprite.py` and render a 256x256 `sprite.png` with `python tools/render_sprite.py recipes/<id>`.
+3. For a made or wishlist recipe, add `sprite.py` and render a 256x256 `sprite.png` with `python tools/render_sprite.py recipes/<id>`.
 4. Add `photo.jpg` via `python tools/resize_photo.py <input> recipes/<id>` when needed.
 5. Run `make index` and `make validate` before finishing.
 
-The Claude workflow is described in `CLAUDE.md` and the owner can paste the detailed recipe workflow into `docs/ADD_RECIPE.md`.
+The Claude workflow lives in `docs/ADD_RECIPE.md`. Wishlist recipes with `"sprite": null` fall back to `style/wishlist_placeholder.png`. Dates use US Eastern time (`tools/dates.py`).
