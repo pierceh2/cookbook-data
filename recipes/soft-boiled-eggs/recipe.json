@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "soft-boiled-eggs",
+  "status": "made",
+  "madeAt": "2026-11-08",
+  "title": "Soft-Boiled Eggs",
+  "description": "Eggs boiled in vinegared water for 7 minutes and shocked in ice, so the white is just set and the golden yolk stays runny. Finished with a pinch of salt or a drizzle of soy sauce.",
+  "sprite": "sprite.png",
+  "photo": null,
+  "servings": null,
+  "prepMinutes": null,
+  "cookMinutes": 7,
+  "tags": [
+    "breakfast",
+    "egg",
+    "boiled",
+    "snack",
+    "quick"
+  ],
+  "ingredients": [
+    { "name": "egg", "line": "Egg", "group": null },
+    { "name": "water", "line": "Water", "group": null },
+    { "name": "vinegar", "line": "Vinegar", "group": null },
+    { "name": "ice", "line": "Ice", "group": null },
+    { "name": "salt", "line": "Salt or soy sauce, to serve", "group": null }
+  ],
+  "steps": [
+    "Bring a pot of water to a boil and add the vinegar.",
+    "Add the eggs and boil for 7 minutes for a runny yolk, or 8 for jammy.",
+    "Move the eggs to an ice bath and let them rest at least 5 minutes.",
+    "Peel, halve and serve with salt or soy sauce."
+  ],
+  "tips": "Boil for 8 minutes instead of 7 for a jammier yolk.",
+  "notes": null,
+  "source": null,
+  "createdAt": "2026-11-08",
+  "updatedAt": "2026-11-08"
+}

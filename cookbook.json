@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-08T02:41:45Z",
-  "madeCount": 1,
-  "recipeCount": 2,
+  "generatedAt": "2026-11-08T06:10:11Z",
+  "madeCount": 2,
+  "recipeCount": 3,
   "recipes": [
     {
       "contentHash": "df14944fde7a7dc95f5643c88adcf766aa6f0007258e368595e3f0a258081eda",
@@ -76,6 +76,67 @@
       ],
       "tips": "Use a little extra butter for a glossy finish.",
       "title": "Sample Pancakes",
+      "updatedAt": "2026-11-08"
+    },
+    {
+      "contentHash": "bc17610229847e9c846e125764908ae944d9f5df1ff7c08786e2cf4f0f6e5ff1",
+      "cookMinutes": 7,
+      "createdAt": "2026-11-08",
+      "description": "Eggs boiled in vinegared water for 7 minutes and shocked in ice, so the white is just set and the golden yolk stays runny. Finished with a pinch of salt or a drizzle of soy sauce.",
+      "id": "soft-boiled-eggs",
+      "ingredients": [
+        {
+          "group": null,
+          "line": "Egg",
+          "name": "egg"
+        },
+        {
+          "group": null,
+          "line": "Water",
+          "name": "water"
+        },
+        {
+          "group": null,
+          "line": "Vinegar",
+          "name": "vinegar"
+        },
+        {
+          "group": null,
+          "line": "Ice",
+          "name": "ice"
+        },
+        {
+          "group": null,
+          "line": "Salt or soy sauce, to serve",
+          "name": "salt"
+        }
+      ],
+      "madeAt": "2026-11-08",
+      "notes": null,
+      "photo": null,
+      "photoPath": null,
+      "prepMinutes": null,
+      "schemaVersion": 1,
+      "servings": null,
+      "source": null,
+      "sprite": "sprite.png",
+      "spritePath": "recipes/soft-boiled-eggs/sprite.png",
+      "status": "made",
+      "steps": [
+        "Bring a pot of water to a boil and add the vinegar.",
+        "Add the eggs and boil for 7 minutes for a runny yolk, or 8 for jammy.",
+        "Move the eggs to an ice bath and let them rest at least 5 minutes.",
+        "Peel, halve and serve with salt or soy sauce."
+      ],
+      "tags": [
+        "breakfast",
+        "egg",
+        "boiled",
+        "snack",
+        "quick"
+      ],
+      "tips": "Boil for 8 minutes instead of 7 for a jammier yolk.",
+      "title": "Soft-Boiled Eggs",
       "updatedAt": "2026-11-08"
     }
   ],
