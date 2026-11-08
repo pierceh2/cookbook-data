@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-08T06:10:11Z",
-  "madeCount": 2,
-  "recipeCount": 3,
+  "generatedAt": "2026-11-08T06:12:17Z",
+  "madeCount": 1,
+  "recipeCount": 2,
   "recipes": [
     {
       "contentHash": "df14944fde7a7dc95f5643c88adcf766aa6f0007258e368595e3f0a258081eda",
@@ -28,54 +28,6 @@
       ],
       "tips": null,
       "title": "Sample Beef Wellington",
-      "updatedAt": "2026-11-08"
-    },
-    {
-      "contentHash": "089139ebd4e63d2805017110f080e373401dc329b708540db0a927c4c5b91225",
-      "cookMinutes": 12,
-      "createdAt": "2026-11-08",
-      "description": "[Sample] A warm stack of buttermilk pancakes with glossy syrup and a butter pat, plated for the morning table.",
-      "id": "sample-pancakes",
-      "ingredients": [
-        {
-          "group": null,
-          "line": "2 cups buttermilk pancake batter",
-          "name": "pancake"
-        },
-        {
-          "group": "Topping",
-          "line": "2 tbsp butter, melted",
-          "name": "butter"
-        },
-        {
-          "group": "Topping",
-          "line": "1/4 cup maple syrup",
-          "name": "syrup"
-        }
-      ],
-      "madeAt": "2026-11-08",
-      "notes": "A cozy breakfast plate for the cookbook preview.",
-      "photo": null,
-      "photoPath": null,
-      "prepMinutes": 10,
-      "schemaVersion": 1,
-      "servings": 2,
-      "source": "Home kitchen",
-      "sprite": "sprite.png",
-      "spritePath": "recipes/sample-pancakes/sprite.png",
-      "status": "made",
-      "steps": [
-        "Pour batter into a warm skillet and cook until the edges set.",
-        "Flip and finish until golden on both sides.",
-        "Stack the pancakes, top with butter and syrup, and serve warm."
-      ],
-      "tags": [
-        "sample",
-        "breakfast",
-        "sweet"
-      ],
-      "tips": "Use a little extra butter for a glossy finish.",
-      "title": "Sample Pancakes",
       "updatedAt": "2026-11-08"
     },
     {
