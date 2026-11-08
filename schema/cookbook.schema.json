@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cookbook",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "generatedAt", "recipeCount", "madeCount", "wishlistCount", "recipes"],
+  "properties": {
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "generatedAt": { "type": "string" },
+    "recipeCount": { "type": "integer", "minimum": 0 },
+    "madeCount": { "type": "integer", "minimum": 0 },
+    "wishlistCount": { "type": "integer", "minimum": 0 },
+    "recipes": { "type": "array", "items": { "type": "object" } }
+  }
+}

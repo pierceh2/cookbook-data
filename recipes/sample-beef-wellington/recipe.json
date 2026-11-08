@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "sample-beef-wellington",
+  "status": "wishlist",
+  "title": "Sample Beef Wellington",
+  "description": "A rich, pastry-wrapped beef meal I want to make for a winter dinner.",
+  "sprite": null,
+  "photo": null,
+  "servings": null,
+  "prepMinutes": null,
+  "cookMinutes": null,
+  "tags": [
+    "dinner"
+  ],
+  "ingredients": [],
+  "steps": [],
+  "tips": null,
+  "notes": "This is the classic holiday centerpiece I want to try once the weather turns cold.",
+  "source": "The public library cookbook shelf",
+  "createdAt": "2026-11-08",
+  "updatedAt": "2026-11-08",
+  "madeAt": null
+}

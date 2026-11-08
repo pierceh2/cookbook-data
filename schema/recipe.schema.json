@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Recipe",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "status": { "type": "string", "enum": ["made", "wishlist"] },
+    "madeAt": { "type": ["string", "null"], "format": "date" },
+    "title": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "sprite": { "type": ["string", "null"], "minLength": 1 },
+    "photo": { "type": ["string", "null"], "minLength": 1 },
+    "servings": { "type": ["integer", "null"], "minimum": 1 },
+    "prepMinutes": { "type": ["integer", "null"], "minimum": 1 },
+    "cookMinutes": { "type": ["integer", "null"], "minimum": 1 },
+    "tags": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" } },
+    "ingredients": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/ingredient" }
+    },
+    "steps": { "type": "array", "items": { "type": "string" } },
+    "tips": { "type": ["string", "null"] },
+    "notes": { "type": ["string", "null"] },
+    "source": { "type": ["string", "null"] },
+    "createdAt": { "type": "string", "format": "date" },
+    "updatedAt": { "type": "string", "format": "date" }
+  },
+  "$defs": {
+    "ingredient": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "line": { "type": "string", "minLength": 1 },
+        "group": { "type": ["string", "null"] }
+      },
+      "required": ["name", "line", "group"]
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "id",
+    "status",
+    "title",
+    "description",
+    "createdAt",
+    "updatedAt"
+  ],
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "made" } }, "required": ["status"] },
+      "then": {
+        "required": ["madeAt", "sprite", "ingredients", "steps"],
+        "properties": {
+          "madeAt": { "type": "string", "format": "date" },
+          "sprite": { "type": "string", "minLength": 1 },
+          "ingredients": { "minItems": 1 },
+          "steps": { "minItems": 1 }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "status": { "const": "wishlist" } }, "required": ["status"] },
+      "then": {
+        "properties": {
+          "madeAt": { "type": "null" },
+          "sprite": { "type": ["string", "null"] },
+          "ingredients": { "type": "array", "maxItems": 0 },
+          "steps": { "type": "array", "maxItems": 0 }
+        }
+      }
+    }
+  ]
+}
