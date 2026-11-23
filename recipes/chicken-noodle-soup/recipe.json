@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "chicken-noodle-soup",
+  "status": "made",
+  "madeAt": "2026-11-22",
+  "title": "Chicken Noodle Soup",
+  "description": "A clear, golden broth loaded with chunks of seasoned chicken, carrots, celery, tomatoes and ditalini. Served in a deep bowl with a pile of oyster crackers on the side.",
+  "sprite": "sprite.png",
+  "photo": "photo.jpg",
+  "servings": null,
+  "prepMinutes": null,
+  "cookMinutes": 30,
+  "tags": [
+    "soup",
+    "chicken",
+    "dinner",
+    "comfort-food",
+    "instant-pot"
+  ],
+  "ingredients": [
+    { "name": "chicken broth", "line": "chicken broth", "group": null },
+    { "name": "tomato", "line": "canned tomatoes", "group": null },
+    { "name": "carrot", "line": "carrots", "group": null },
+    { "name": "celery", "line": "celery", "group": null },
+    { "name": "chicken breast", "line": "chicken breast", "group": null },
+    { "name": "ditalini", "line": "ditalini pasta", "group": null },
+    { "name": "water", "line": "water", "group": null },
+    { "name": "oyster cracker", "line": "oyster crackers, to serve", "group": null },
+    { "name": "salt", "line": "salt", "group": "Seasonings" },
+    { "name": "black pepper", "line": "black pepper", "group": "Seasonings" },
+    { "name": "chili powder", "line": "chili powder", "group": "Seasonings" },
+    { "name": "garlic powder", "line": "garlic powder", "group": "Seasonings" },
+    { "name": "cayenne", "line": "cayenne powder (little)", "group": "Seasonings" },
+    { "name": "olive oil", "line": "olive oil", "group": "Seasonings" }
+  ],
+  "steps": [
+    "Cut all the veggies and the chicken.",
+    "Add the chicken, broth, veggies and the rest of the ingredients to the Instant Pot.",
+    "Add more water to stretch the broth.",
+    "Cook on the Soup setting for 30 minutes.",
+    "Serve with oyster crackers."
+  ],
+  "tips": null,
+  "notes": null,
+  "source": null,
+  "createdAt": "2026-11-22",
+  "updatedAt": "2026-11-22"
+}

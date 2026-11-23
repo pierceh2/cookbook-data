@@ -1,8 +1,115 @@
 {
-  "generatedAt": "2026-11-08T06:12:17Z",
-  "madeCount": 1,
-  "recipeCount": 2,
+  "generatedAt": "2026-11-23T01:16:18Z",
+  "madeCount": 2,
+  "recipeCount": 3,
   "recipes": [
+    {
+      "contentHash": "a322e7d5bbedc2964997b4a64d751bf8f3a84b338bf19e3b7d19444ff71996a8",
+      "cookMinutes": 30,
+      "createdAt": "2026-11-22",
+      "description": "A clear, golden broth loaded with chunks of seasoned chicken, carrots, celery, tomatoes and ditalini. Served in a deep bowl with a pile of oyster crackers on the side.",
+      "id": "chicken-noodle-soup",
+      "ingredients": [
+        {
+          "group": null,
+          "line": "chicken broth",
+          "name": "chicken broth"
+        },
+        {
+          "group": null,
+          "line": "canned tomatoes",
+          "name": "tomato"
+        },
+        {
+          "group": null,
+          "line": "carrots",
+          "name": "carrot"
+        },
+        {
+          "group": null,
+          "line": "celery",
+          "name": "celery"
+        },
+        {
+          "group": null,
+          "line": "chicken breast",
+          "name": "chicken breast"
+        },
+        {
+          "group": null,
+          "line": "ditalini pasta",
+          "name": "ditalini"
+        },
+        {
+          "group": null,
+          "line": "water",
+          "name": "water"
+        },
+        {
+          "group": null,
+          "line": "oyster crackers, to serve",
+          "name": "oyster cracker"
+        },
+        {
+          "group": "Seasonings",
+          "line": "salt",
+          "name": "salt"
+        },
+        {
+          "group": "Seasonings",
+          "line": "black pepper",
+          "name": "black pepper"
+        },
+        {
+          "group": "Seasonings",
+          "line": "chili powder",
+          "name": "chili powder"
+        },
+        {
+          "group": "Seasonings",
+          "line": "garlic powder",
+          "name": "garlic powder"
+        },
+        {
+          "group": "Seasonings",
+          "line": "cayenne powder (little)",
+          "name": "cayenne"
+        },
+        {
+          "group": "Seasonings",
+          "line": "olive oil",
+          "name": "olive oil"
+        }
+      ],
+      "madeAt": "2026-11-22",
+      "notes": null,
+      "photo": "photo.jpg",
+      "photoPath": "recipes/chicken-noodle-soup/photo.jpg",
+      "prepMinutes": null,
+      "schemaVersion": 1,
+      "servings": null,
+      "source": null,
+      "sprite": "sprite.png",
+      "spritePath": "recipes/chicken-noodle-soup/sprite.png",
+      "status": "made",
+      "steps": [
+        "Cut all the veggies and the chicken.",
+        "Add the chicken, broth, veggies and the rest of the ingredients to the Instant Pot.",
+        "Add more water to stretch the broth.",
+        "Cook on the Soup setting for 30 minutes.",
+        "Serve with oyster crackers."
+      ],
+      "tags": [
+        "soup",
+        "chicken",
+        "dinner",
+        "comfort-food",
+        "instant-pot"
+      ],
+      "tips": null,
+      "title": "Chicken Noodle Soup",
+      "updatedAt": "2026-11-22"
+    },
     {
       "contentHash": "df14944fde7a7dc95f5643c88adcf766aa6f0007258e368595e3f0a258081eda",
       "cookMinutes": null,
