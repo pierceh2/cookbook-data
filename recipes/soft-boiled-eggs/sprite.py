@@ -65,8 +65,8 @@ def egg_half(cx, cy, w, h):
         px(c, x, y, 'plum_shadow')
 
 
-egg_half(23, 30, 12, 7)   # back half
-egg_half(38, 41, 14, 8)   # front half, overlapping
+egg_half(22, 42, 10, 6)   # back half, resting on the plate
+egg_half(40, 45, 12, 7)   # front half, overlapping
 
 # Cool shadow pooled on the plate right of the front egg.
 for x, y in [(53, 49), (54, 49), (53, 50), (54, 50), (55, 50), (52, 51), (53, 51)]:

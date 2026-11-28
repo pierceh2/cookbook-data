@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-28T00:11:24Z",
+  "generatedAt": "2026-11-28T00:12:26Z",
   "madeCount": 3,
   "recipeCount": 4,
   "recipes": [
@@ -228,7 +228,7 @@
       "updatedAt": "2026-11-08"
     },
     {
-      "contentHash": "bc17610229847e9c846e125764908ae944d9f5df1ff7c08786e2cf4f0f6e5ff1",
+      "contentHash": "21164cef2ded834655e54cda6e13a6c57fdf676c51f2c9ebf70d4cc085ce3708",
       "cookMinutes": 7,
       "createdAt": "2026-11-08",
       "description": "Eggs boiled in vinegared water for 7 minutes and shocked in ice, so the white is just set and the golden yolk stays runny. Finished with a pinch of salt or a drizzle of soy sauce.",
@@ -286,7 +286,7 @@
       ],
       "tips": "Boil for 8 minutes instead of 7 for a jammier yolk.",
       "title": "Soft-Boiled Eggs",
-      "updatedAt": "2026-11-08"
+      "updatedAt": "2026-11-27"
     }
   ],
   "schemaVersion": 1,
