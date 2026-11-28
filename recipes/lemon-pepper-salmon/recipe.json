@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "lemon-pepper-salmon",
+  "status": "made",
+  "madeAt": "2026-11-27",
+  "title": "Lemon Pepper Salmon",
+  "description": "Flaky salmon fillets with a golden lemon pepper crust, served over a bed of fluffy white rice with blistered cherry tomatoes.",
+  "sprite": "sprite.png",
+  "photo": "photo.jpg",
+  "servings": null,
+  "prepMinutes": null,
+  "cookMinutes": 20,
+  "tags": [
+    "dinner",
+    "salmon",
+    "seafood",
+    "rice-bowl",
+    "baked",
+    "instant-pot"
+  ],
+  "ingredients": [
+    { "name": "salmon", "line": "salmon", "group": "Salmon" },
+    { "name": "lemon juice", "line": "lemon juice", "group": "Salmon" },
+    { "name": "lemon pepper", "line": "lemon pepper", "group": "Salmon" },
+    { "name": "olive oil", "line": "olive oil (optional)", "group": "Salmon" },
+    { "name": "rice", "line": "rice", "group": "Rice" },
+    { "name": "tomato", "line": "tomatoes and/or other veggies", "group": "Veggies" },
+    { "name": "salt", "line": "salt", "group": "Veggies" },
+    { "name": "black pepper", "line": "black pepper", "group": "Veggies" },
+    { "name": "chili powder", "line": "chili powder", "group": "Veggies" },
+    { "name": "garlic powder", "line": "garlic powder", "group": "Veggies" }
+  ],
+  "steps": [
+    "Preheat the oven to 375°F while you work.",
+    "Start the rice in the Instant Pot on about a 12-minute setting, a little before everything else so it's ready at the same time.",
+    "Cut the salmon and sprinkle it with lemon juice.",
+    "Drizzle with olive oil if using, then season with lemon pepper.",
+    "Prep the tomatoes and/or other veggies and sprinkle them with a mix of salt, black pepper, chili powder and garlic powder.",
+    "Bake the salmon and veggies for about 20 minutes.",
+    "Serve together over the rice."
+  ],
+  "tips": "The lemon juice takes away the earthy, dirt-like taste salmon can sometimes have.",
+  "notes": null,
+  "source": null,
+  "createdAt": "2026-11-27",
+  "updatedAt": "2026-11-27"
+}

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-23T01:16:18Z",
-  "madeCount": 2,
-  "recipeCount": 3,
+  "generatedAt": "2026-11-28T00:11:24Z",
+  "madeCount": 3,
+  "recipeCount": 4,
   "recipes": [
     {
       "contentHash": "a322e7d5bbedc2964997b4a64d751bf8f3a84b338bf19e3b7d19444ff71996a8",
@@ -109,6 +109,96 @@
       "tips": null,
       "title": "Chicken Noodle Soup",
       "updatedAt": "2026-11-22"
+    },
+    {
+      "contentHash": "18fe3fe82435a764b390fc1f86043819d9ad8a2091c9b36fbdbcb6de0e33ccfa",
+      "cookMinutes": 20,
+      "createdAt": "2026-11-27",
+      "description": "Flaky salmon fillets with a golden lemon pepper crust, served over a bed of fluffy white rice with blistered cherry tomatoes.",
+      "id": "lemon-pepper-salmon",
+      "ingredients": [
+        {
+          "group": "Salmon",
+          "line": "salmon",
+          "name": "salmon"
+        },
+        {
+          "group": "Salmon",
+          "line": "lemon juice",
+          "name": "lemon juice"
+        },
+        {
+          "group": "Salmon",
+          "line": "lemon pepper",
+          "name": "lemon pepper"
+        },
+        {
+          "group": "Salmon",
+          "line": "olive oil (optional)",
+          "name": "olive oil"
+        },
+        {
+          "group": "Rice",
+          "line": "rice",
+          "name": "rice"
+        },
+        {
+          "group": "Veggies",
+          "line": "tomatoes and/or other veggies",
+          "name": "tomato"
+        },
+        {
+          "group": "Veggies",
+          "line": "salt",
+          "name": "salt"
+        },
+        {
+          "group": "Veggies",
+          "line": "black pepper",
+          "name": "black pepper"
+        },
+        {
+          "group": "Veggies",
+          "line": "chili powder",
+          "name": "chili powder"
+        },
+        {
+          "group": "Veggies",
+          "line": "garlic powder",
+          "name": "garlic powder"
+        }
+      ],
+      "madeAt": "2026-11-27",
+      "notes": null,
+      "photo": "photo.jpg",
+      "photoPath": "recipes/lemon-pepper-salmon/photo.jpg",
+      "prepMinutes": null,
+      "schemaVersion": 1,
+      "servings": null,
+      "source": null,
+      "sprite": "sprite.png",
+      "spritePath": "recipes/lemon-pepper-salmon/sprite.png",
+      "status": "made",
+      "steps": [
+        "Preheat the oven to 375\u00b0F while you work.",
+        "Start the rice in the Instant Pot on about a 12-minute setting, a little before everything else so it's ready at the same time.",
+        "Cut the salmon and sprinkle it with lemon juice.",
+        "Drizzle with olive oil if using, then season with lemon pepper.",
+        "Prep the tomatoes and/or other veggies and sprinkle them with a mix of salt, black pepper, chili powder and garlic powder.",
+        "Bake the salmon and veggies for about 20 minutes.",
+        "Serve together over the rice."
+      ],
+      "tags": [
+        "dinner",
+        "salmon",
+        "seafood",
+        "rice-bowl",
+        "baked",
+        "instant-pot"
+      ],
+      "tips": "The lemon juice takes away the earthy, dirt-like taste salmon can sometimes have.",
+      "title": "Lemon Pepper Salmon",
+      "updatedAt": "2026-11-27"
     },
     {
       "contentHash": "df14944fde7a7dc95f5643c88adcf766aa6f0007258e368595e3f0a258081eda",
